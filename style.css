@@ -1,3 +1,5 @@
+/* ALT Z, faz quebra de linha dentro do visualcod */
+
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;700&display=swap');
 
 *{
@@ -8,12 +10,70 @@
 }
 
 :root{
-    --title: #ECE4EF;
+    --title: #ECE4EF; /* é uma variável */
     --description: #D8CEDE;
     --description-info: #9C83A7;
 }
 
 body{
-    color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* alinhar na horizontal */
+    align-items: center; /* alinhar na vertical */
+    background: linear-gradient(102.32deg, #030422 -2.74%, #090114 101.6%);
+}
+
+.container{
+
+}
+
+.cards{
+    display: flex;
+    align-items: center; /* alinhar na vertical */
+    gap: 32px;
+}
+
+.card-back{
+    width: 348px;
+    height: 486px;
+    box-shadow: 0px 113px 45px rgba(0, 0, 0, 0.02), 0px 64px 38px rgba(0, 0, 0, 0.08), 0px 28px 28px rgba(0, 0, 0, 0.13), 0px 7px 16px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+/* : siginifica pseudo-classe, o first-child quer falar que é para pegar o primeiro card-back. já */
+.card-back:first-child{
+    background-image: url("./assets/cardfundo/fundoleft.png");
+    font-size: 32px;
+    object-fit: cover;
+}
+
+.card-back:last-child{
+    background-image: url("./assets/cardfundo/fundoright.png");
+    font-size: 32px;
+    object-fit: cover;
+}
+
+.card-back h1{
+    -webkit-text-stroke: 1px #312D74; /* o webkit é uma biblioteca do css, o stroke é utilizado para trabalhar com o vazado da letra */
+    -webkit-text-fill-color: transparent; /* este comando deixa a letra com o interior transparente */
+}
+
+.card-front{
+    object-fit: cover; /* este comando faz a imagem se ajustar ao tamanho do box */
+    background-image: url("./assets/cardfrente/fundocenter.png");
+    width: 436px;
+    height: 608px;
+    border-radius: 20px;
+    box-shadow: 0px 294px 118px rgba(0, 0, 0, 0.03), 0px 165px 99px rgba(0, 0, 0, 0.1), 0px 73px 73px rgba(0, 0, 0, 0.17), 0px 18px 40px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-front header{
+    width: 263px;
+    height: 110px;
 }
