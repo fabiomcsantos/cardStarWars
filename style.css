@@ -26,14 +26,9 @@ body{
     background: linear-gradient(102.32deg, #030422 -2.74%, #090114 101.6%);
 }
 
-.container{
-
-}
-
 .cards{
     display: flex;
     align-items: center; /* alinhar na vertical */
-    gap: 32px;
 }
 
 .card-back{
@@ -44,6 +39,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 16px;
+    margin: auto -40px;
 }
 
 /* : siginifica pseudo-classe, o first-child quer falar que é para pegar o primeiro card-back. já */
@@ -71,9 +67,57 @@ body{
     height: 608px;
     border-radius: 20px;
     box-shadow: 0px 294px 118px rgba(0, 0, 0, 0.03), 0px 165px 99px rgba(0, 0, 0, 0.1), 0px 73px 73px rgba(0, 0, 0, 0.17), 0px 18px 40px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.card-front header{
-    width: 263px;
-    height: 110px;
+.card-info{
+    padding: 48px 133px 60px 40px;
 }
+
+.card-info header{
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* utilizado para dar o espaçamento (distancia entre as linhas) entre os textos */
+    width: 263px;
+}
+
+.card-info h2{
+    font-size: 32px;
+    color: var(--title);
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 198px;
+    margin-top: 60px;
+    gap: 16px;
+}
+
+.card-info span{
+    line-height: 18px;
+    color: var(--description-info);
+    font-size: 14px;
+    font-weight: 400;
+    /* margin-bottom: 60px; */
+}
+
+.card-info h4{
+    line-height: 18px;
+    color: var(--description);
+    font-size: 14px;
+    font-weight: 700;
+    /* margin-bottom: 16px; */
+}
+
+.mulher img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
